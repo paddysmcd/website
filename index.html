@@ -1,43 +1,102 @@
-<body style="background-color: rgb(255, 255, 255);">
-    <div style="background-color:rgb(12, 103, 145);">
-        <u style="text-decoration-color:rgb(230, 68, 68);">
-            <p style="font-size: 100px;color:rgb(230, 68, 68);">Donna Doyle</p>
-            <img alt="A women named Donna Doyle" src="Granny.jpg" width="462" /><img alt="A women named Donna Doyle"
-                src="granny3.jpg" width="430" /><img alt="A women named Donna Doyle" src="Granny2.jpg" width="328" />
-            <br>
-            <a style="font-size: 60px; color:rgb(230, 68, 68);" href="./about.html">Learn About Me</a>
+<body>
+    <div style="background-color:rgb(183, 110, 121);">
+        <form action="action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue"><a
+                            style="font-size: 17px; color:dodgerblue" href="./termsandprivacy.html">Terms & Privacy</a>.
+                </p>
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+        <br />
+    </div>
+    <div style="background-color:rgb(183, 110, 121);">
+        <p style="font-size: 75px;color:whitesmoke;">What do you like?</p>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I like restaurants</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like fast food</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like movie theatres</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like amusment parks</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like water parks</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like museums</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like zoos and aquariums</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like libraries</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like sports games</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like fishing</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like musicals and plays</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like concerts</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like bowling</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like minigolf</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like pools</label>
+        <br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I like parks</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I like shopping</label>
+        <br>
+        <button onclick="getLocation()">Find Locations Near Me</button>
+        <p id="demo"></p>
+
+        <script>
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+        <br>
+        <br>
         </u>
         <br>
         <hr>
-
     </div>
-    <div style="background-color:rgb(230, 68, 68);">
-        <h5>
-            <span style="color:rgb(12, 103, 145);font-size: 35px;">
-                <h2><u>The Grumpy Granny Comics!</u></h2>
-            </span>
-            <p style="font-size: 30px; color: plum;">I am now writing some comics called, "The Grumpy Granny".</p>
-            <a style="font-size: 30px; color:plum;" href="./TheGrumpyGrannyComics.html">Click here to learn more about
-                The Grumpy Granny
-                Comics!</a>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </h5>
-        <hr />
-    </div>
-    <br />
-    <div style="background-color: plum;">
-        <hr>
-        <p style="font-size: 75px; color:rgb(230, 68, 68);"><u>Masks!</u></p>
-        <p style="font-size: 30px; color: rgb(12, 103, 145);">During this hard time, you have to stay safe. And part of
-            that means wearing masks.
-            I have now started making masks and donating them!</p><a style="font-size: 30px; color: rgb(230, 68, 68);"
-            href="./masks.html">Click
-            here to see pictures of the masks I've made!</a>
-        <hr />
-    </div>
-</body>
